@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Melchor Mendoza Ramírez</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       font-family: sans-serif;
       background-color: #fff;
       color: #111;
       margin: 0;
-      padding: 80px 20px 60px;
+      padding: 100px 20px 60px;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
@@ -39,14 +36,13 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 0.5em;
+      font-family: Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 0.2em;
+      color: #111;
     }
 
     h2 {
@@ -60,6 +56,7 @@
       font-style: italic;
       color: #444;
       margin-bottom: 2em;
+      text-align: center;
     }
 
     ul {
@@ -82,7 +79,7 @@
     .cta {
       background-color: #0070f3;
       color: #fff;
-      padding: 15px 20px;
+      padding: 12px 20px;
       display: inline-block;
       margin-top: 1.5em;
       text-decoration: none;
@@ -96,12 +93,15 @@
       text-align: center;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: inline-block;
-        margin: 8px;
-        font-size: 0.95em;
-      }
+    .lang-es, .lang-en { display: none; }
+    #toggle:checked ~ main .lang-en { display: block; }
+    #toggle:not(:checked) ~ main .lang-es { display: block; }
+
+    .lang-switch {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -115,51 +115,100 @@
     </nav>
   </header>
 
+  <!-- Language switch -->
+  <label class="lang-switch">
+    <input type="checkbox" id="toggle" /> English
+  </label>
+
   <main>
-    <h1>Melchor Mendoza Ramírez</h1>
-    <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
+    <!-- Español -->
+    <div class="lang-es">
+      <h1>Melchor Mendoza Ramírez</h1>
+      <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Soy ingeniero de software con más de 10 años de experiencia en desarrollo web y más de 5 en dirección de proyectos. Actualmente trabajo como <strong>Software Project Manager</strong> en una fábrica de software y como <strong>freelancer desarrollando aplicaciones móviles low-code con FlutterFlow</strong>.</p>
+      <section id="about">
+        <h2>Sobre mí</h2>
+        <p>Ingeniero de software con más de 10 años de experiencia en desarrollo web y más de 5 en dirección de proyectos. Actualmente soy <strong>Software Project Manager</strong> en una fábrica de software y freelancer en desarrollo móvil low-code con FlutterFlow.</p>
+        <p>Certificado como <strong>Scrum Master, Agile Coach, OKR Champion</strong> y Design Thinking. Enfocado en llevar ideas a productos funcionales con rapidez y calidad.</p>
+      </section>
 
-      <p>Estoy certificado como <strong>Scrum Master, Agile Coach, OKR Champion</strong> y en <strong>Design Thinking</strong>. Me especializo en llevar ideas a productos funcionales con rapidez, calidad y foco en el usuario.</p>
-    </section>
+      <section id="services">
+        <h2>Servicios</h2>
+        <ul>
+          <li><strong>Dirección:</strong> liderazgo técnico y de proyectos.</li>
+          <li><strong>SCRUM:</strong> implementación y coaching ágil.</li>
+          <li><strong>Acompañamiento:</strong> mentoría a equipos SCRUM.</li>
+          <li><strong>Desarrollo:</strong> apps móviles low-code con FlutterFlow + Firebase.</li>
+        </ul>
+      </section>
 
-    <section id="services">
-      <h2>Services</h2>
-      <ul>
-        <li><strong>Dirección:</strong> liderar equipos técnicos y proyectos de software.</li>
-        <li><strong>SCRUM:</strong> implementación completa de la metodología ágil.</li>
-        <li><strong>Acompañamiento:</strong> coaching y soporte a equipos de desarrollo.</li>
-        <li><strong>Desarrollo:</strong> creación de apps móviles low-code con FlutterFlow + Firebase.</li>
-      </ul>
-    </section>
+      <section id="projects">
+        <h2>Proyectos</h2>
+        <ul>
+          <li><strong>Flotilla 360:</strong> gestión de flotillas.</li>
+          <li><strong>Vendisto:</strong> ventas de ruta.</li>
+          <li><strong>FixIT:</strong> reporte de incidencias ciudadanas.</li>
+          <li><strong>Money:</strong> control de remesas.</li>
+          <li><strong>Kore ERP:</strong> ERP para empresas retail.</li>
+        </ul>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Flotilla 360:</strong> app móvil para gestión de flotillas vehiculares.</li>
-        <li><strong>Vendisto:</strong> app para planeación de ventas de ruta.</li>
-        <li><strong>FixIT:</strong> app ciudadana para reporte de incidencias en servicios públicos.</li>
-        <li><strong>Money:</strong> app para el control de remesas familiares.</li>
-        <li><strong>Kore ERP:</strong> ERP en desarrollo para empresas del sector retail.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Contacto</h2>
+        <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
+        🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
+        🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
-      🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
-      🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
+        <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">¡Hablemos!</a>
+      </section>
+    </div>
 
-      <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">¡Hablemos! Estoy abierto a nuevos proyectos</a>
-    </section>
+    <!-- English -->
+    <div class="lang-en">
+      <h1>Melchor Mendoza Ramírez</h1>
+      <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
 
-    <footer>
-      <p>&copy; 2025 Melchor Mendoza Ramírez</p>
-    </footer>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Software engineer with over 10 years of experience in web development and more than 5 in project management. I currently work as a <strong>Software Project Manager</strong> in a software company and as a freelance mobile app developer using FlutterFlow.</p>
+        <p>Certified <strong>Scrum Master, Agile Coach, OKR Champion</strong> and Design Thinking practitioner. I help turn ideas into functional digital products quickly and efficiently.</p>
+      </section>
+
+      <section id="services">
+        <h2>Services</h2>
+        <ul>
+          <li><strong>Leadership:</strong> technical and project management.</li>
+          <li><strong>SCRUM:</strong> agile implementation and coaching.</li>
+          <li><strong>Mentorship:</strong> guidance for development teams.</li>
+          <li><strong>Development:</strong> mobile apps using FlutterFlow + Firebase.</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Flotilla 360:</strong> fleet management mobile app.</li>
+          <li><strong>Vendisto:</strong> sales route planning app.</li>
+          <li><strong>FixIT:</strong> citizen incident reporting app.</li>
+          <li><strong>Money:</strong> remittance tracking app.</li>
+          <li><strong>Kore ERP:</strong> custom ERP for retail companies.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
+        🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
+        🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
+
+        <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">Let's work together</a>
+      </section>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Melchor Mendoza Ramírez</p>
+  </footer>
 
 </body>
 </html>
