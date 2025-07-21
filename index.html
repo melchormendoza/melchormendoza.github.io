@@ -5,16 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Melchor Mendoza Ramírez</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: sans-serif;
       background-color: #fff;
       color: #111;
       margin: 0;
-      padding: 60px 20px;
+      padding: 80px 20px 60px;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0070f3;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     h1 {
@@ -67,46 +93,73 @@
       margin-top: 4em;
       font-size: 0.9em;
       color: #777;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 0.95em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Melchor Mendoza Ramírez</h1>
-  <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
+  <header>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
 
-  <h2>Sobre mí</h2>
-  <p>Soy ingeniero de software con más de 10 años de experiencia en desarrollo web y más de 5 en dirección de proyectos. Actualmente trabajo como <strong>Software Project Manager</strong> en una fábrica de software y como <strong>freelancer desarrollando aplicaciones móviles low-code con FlutterFlow</strong>.</p>
+  <main>
+    <h1>Melchor Mendoza Ramírez</h1>
+    <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
 
-  <p>Estoy certificado como <strong>Scrum Master, Agile Coach, OKR Champion</strong> y en <strong>Design Thinking</strong>. Me especializo en llevar ideas a productos funcionales con rapidez, calidad y foco en el usuario.</p>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Soy ingeniero de software con más de 10 años de experiencia en desarrollo web y más de 5 en dirección de proyectos. Actualmente trabajo como <strong>Software Project Manager</strong> en una fábrica de software y como <strong>freelancer desarrollando aplicaciones móviles low-code con FlutterFlow</strong>.</p>
 
-  <h2>¿Qué puedo hacer por ti?</h2>
-  <ul>
-    <li><strong>Dirección:</strong> liderar equipos técnicos y proyectos de software.</li>
-    <li><strong>SCRUM:</strong> implementación completa de la metodología ágil.</li>
-    <li><strong>Acompañamiento:</strong> coaching y soporte a equipos de desarrollo.</li>
-    <li><strong>Desarrollo:</strong> creación de apps móviles low-code con FlutterFlow + Firebase.</li>
-  </ul>
+      <p>Estoy certificado como <strong>Scrum Master, Agile Coach, OKR Champion</strong> y en <strong>Design Thinking</strong>. Me especializo en llevar ideas a productos funcionales con rapidez, calidad y foco en el usuario.</p>
+    </section>
 
-  <h2>Proyectos destacados</h2>
-  <ul>
-    <li><strong>Flotilla 360:</strong> app móvil para gestión de flotillas vehiculares.</li>
-    <li><strong>Vendisto:</strong> app para planeación de ventas de ruta.</li>
-    <li><strong>FixIT:</strong> app ciudadana para reporte de incidencias en servicios públicos.</li>
-    <li><strong>Money:</strong> app para el control de remesas familiares.</li>
-    <li><strong>Kore ERP:</strong> ERP en desarrollo para empresas del sector retail.</li>
-  </ul>
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li><strong>Dirección:</strong> liderar equipos técnicos y proyectos de software.</li>
+        <li><strong>SCRUM:</strong> implementación completa de la metodología ágil.</li>
+        <li><strong>Acompañamiento:</strong> coaching y soporte a equipos de desarrollo.</li>
+        <li><strong>Desarrollo:</strong> creación de apps móviles low-code con FlutterFlow + Firebase.</li>
+      </ul>
+    </section>
 
-  <h2>Contacto</h2>
-  <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
-  🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
-  🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Flotilla 360:</strong> app móvil para gestión de flotillas vehiculares.</li>
+        <li><strong>Vendisto:</strong> app para planeación de ventas de ruta.</li>
+        <li><strong>FixIT:</strong> app ciudadana para reporte de incidencias en servicios públicos.</li>
+        <li><strong>Money:</strong> app para el control de remesas familiares.</li>
+        <li><strong>Kore ERP:</strong> ERP en desarrollo para empresas del sector retail.</li>
+      </ul>
+    </section>
 
-  <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">¡Hablemos! Estoy abierto a nuevos proyectos</a>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
+      🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
+      🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
 
-  <footer>
-    <p>&copy; 2025 Melchor Mendoza Ramírez</p>
-  </footer>
+      <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">¡Hablemos! Estoy abierto a nuevos proyectos</a>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Melchor Mendoza Ramírez</p>
+    </footer>
+  </main>
 
 </body>
 </html>
