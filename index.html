@@ -1,8 +1,167 @@
 <!DOCTYPE html>
-<html>
-   <head>
-   </head>
-   <body>
-	Hola mundo!
-   </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Melchor Mendoza - Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 5px;
+    }
+
+    .project, .skill {
+      background: var(--card-bg);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+      color: var(--accent-color);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      section {
+        margin: 30px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Melchor Mendoza</h1>
+    <p>Ingeniero en Sistemas · Project Manager · Desarrollador</p>
+    <nav>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="proyectos">
+    <h2>🛠 Proyectos</h2>
+
+    <div class="project">
+      <h3>Gestor de Visitas para Vendedores</h3>
+      <p>App móvil FlutterFlow + Firebase para registrar rutas, visitas y ventas de vendedores de campo.</p>
+    </div>
+
+    <div class="project">
+      <h3>Kore ERP</h3>
+      <p>Sistema ERP modular para la gestión de inventarios, ventas y compras. Rol: PM y soporte funcional.</p>
+    </div>
+
+    <div class="project">
+      <h3>Modist</h3>
+      <p>App web para gestión de jardines de eventos: reservas, contratos PDF, y agenda de disponibilidad.</p>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>💡 Habilidades</h2>
+    <div class="skill">✔️ Gestión Ágil: Scrum, OKR, Design Thinking</div>
+    <div class="skill">✔️ FlutterFlow + Firebase + GeoFlutterFire</div>
+    <div class="skill">✔️ Automatización con Google Apps Script</div>
+    <div class="skill">✔️ Integraciones API, WhatsApp, Email y SMS</div>
+    <div class="skill">✔️ Liderazgo técnico y gestión de equipos</div>
+  </section>
+
+  <section id="contacto">
+    <h2>📬 Contacto</h2>
+    <p>¿Quieres colaborar o contratarme? Contáctame por:</p>
+    <ul>
+      <li>Email: <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></li>
+      <li>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Melchor Mendoza · Todos los derechos reservados</p>
+  </footer>
+</body>
 </html>
