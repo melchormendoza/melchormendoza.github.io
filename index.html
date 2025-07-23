@@ -5,210 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Melchor Mendoza Ramírez</title>
   <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: sans-serif;
-      background-color: #fff;
-      color: #111;
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --accent: #0070f3;
+      --font-main: 'Georgia', serif;
+      --font-body: 'Helvetica Neue', sans-serif;
+    }
+
+    * {
       margin: 0;
-      padding: 100px 20px 60px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-top: 80px;
+      padding-bottom: 60px;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #fff;
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-      z-index: 1000;
       text-align: center;
+      margin-bottom: 60px;
     }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0070f3;
-      font-weight: bold;
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .nav-buttons button {
+      background: transparent;
+      border: 2px solid var(--text);
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-buttons button:hover {
+      background: var(--text);
+      color: var(--bg);
     }
 
     h1 {
-      font-family: Georgia, serif;
+      font-family: var(--font-main);
       font-size: 3.5rem;
       font-weight: normal;
-      text-align: center;
-      margin-bottom: 0.2em;
-      color: #111;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-top: 2.5em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
     }
 
     .tagline {
+      font-size: 1.2rem;
       font-style: italic;
       color: #444;
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
+    }
+
+    .bio {
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
       text-align: center;
     }
 
-    ul {
-      padding-left: 1.2em;
+    .contact {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;
     }
 
-    li {
-      margin-bottom: 0.5em;
-    }
-
-    a {
-      color: #0070f3;
+    .contact a {
+      color: var(--accent);
       text-decoration: none;
     }
 
-    a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
 
-    .cta {
-      background-color: #0070f3;
-      color: #fff;
-      padding: 12px 20px;
-      display: inline-block;
-      margin-top: 1.5em;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-
-    footer {
-      margin-top: 4em;
-      font-size: 0.9em;
-      color: #777;
-      text-align: center;
-    }
-
-    .lang-es, .lang-en { display: none; }
-    #toggle:checked ~ main .lang-en { display: block; }
-    #toggle:not(:checked) ~ main .lang-es { display: block; }
-
-    .lang-switch {
-      position: fixed;
-      top: 10px;
-      right: 20px;
-      font-size: 0.9em;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="nav-buttons">
+        <button>About Me</button>
+        <button>Services</button>
+        <button>Projects</button>
+      </div>
 
-  <header>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-    </nav>
-  </header>
-
-  <!-- Language switch -->
-  <label class="lang-switch">
-    <input type="checkbox" id="toggle" /> English
-  </label>
-
-  <main>
-    <!-- Español -->
-    <div class="lang-es">
       <h1>Melchor Mendoza Ramírez</h1>
-      <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
+      <div class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</div>
+    </header>
 
-      <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Ingeniero de software con más de 10 años de experiencia en desarrollo web y más de 5 en dirección de proyectos. Actualmente soy <strong>Software Project Manager</strong> en una fábrica de software y freelancer en desarrollo móvil low-code con FlutterFlow.</p>
-        <p>Certificado como <strong>Scrum Master, Agile Coach, OKR Champion</strong> y Design Thinking. Enfocado en llevar ideas a productos funcionales con rapidez y calidad.</p>
-      </section>
-
-      <section id="services">
-        <h2>Servicios</h2>
-        <ul>
-          <li><strong>Dirección:</strong> liderazgo técnico y de proyectos.</li>
-          <li><strong>SCRUM:</strong> implementación y coaching ágil.</li>
-          <li><strong>Acompañamiento:</strong> mentoría a equipos SCRUM.</li>
-          <li><strong>Desarrollo:</strong> apps móviles low-code con FlutterFlow + Firebase.</li>
-        </ul>
-      </section>
-
-      <section id="projects">
-        <h2>Proyectos</h2>
-        <ul>
-          <li><strong>Flotilla 360:</strong> gestión de flotillas.</li>
-          <li><strong>Vendisto:</strong> ventas de ruta.</li>
-          <li><strong>FixIT:</strong> reporte de incidencias ciudadanas.</li>
-          <li><strong>Money:</strong> control de remesas.</li>
-          <li><strong>Kore ERP:</strong> ERP para empresas retail.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contacto</h2>
-        <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
-        🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
-        🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
-
-        <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">¡Hablemos!</a>
-      </section>
+    <div class="bio">
+      <p>
+        Soy ingeniero de software con más de 10 años de experiencia en desarrollo web y más de 5 en gestión de proyectos. Actualmente lidero un equipo en una fábrica de software, además de colaborar como freelancer desarrollando aplicaciones móviles con FlutterFlow. 
+      </p>
+      <p>
+        Estoy certificado como Scrum Master, OKR Champion, Agile Coach y experto en Design Thinking. Mi enfoque es construir productos funcionales de forma ágil, simple y efectiva.
+      </p>
     </div>
 
-    <!-- English -->
-    <div class="lang-en">
-      <h1>Melchor Mendoza Ramírez</h1>
-      <p class="tagline">FlutterFlow Mobile Developer · Software Project Manager · Agile Coach</p>
-
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Software engineer with over 10 years of experience in web development and more than 5 in project management. I currently work as a <strong>Software Project Manager</strong> in a software company and as a freelance mobile app developer using FlutterFlow.</p>
-        <p>Certified <strong>Scrum Master, Agile Coach, OKR Champion</strong> and Design Thinking practitioner. I help turn ideas into functional digital products quickly and efficiently.</p>
-      </section>
-
-      <section id="services">
-        <h2>Services</h2>
-        <ul>
-          <li><strong>Leadership:</strong> technical and project management.</li>
-          <li><strong>SCRUM:</strong> agile implementation and coaching.</li>
-          <li><strong>Mentorship:</strong> guidance for development teams.</li>
-          <li><strong>Development:</strong> mobile apps using FlutterFlow + Firebase.</li>
-        </ul>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Flotilla 360:</strong> fleet management mobile app.</li>
-          <li><strong>Vendisto:</strong> sales route planning app.</li>
-          <li><strong>FixIT:</strong> citizen incident reporting app.</li>
-          <li><strong>Money:</strong> remittance tracking app.</li>
-          <li><strong>Kore ERP:</strong> custom ERP for retail companies.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a><br>
-        🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a><br>
-        🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
-
-        <a class="cta" href="mailto:melchor.mendoza.ramirez@gmail.com">Let's work together</a>
-      </section>
+    <div class="contact">
+      <p>📧 <a href="mailto:melchor.mendoza.ramirez@gmail.com">melchor.mendoza.ramirez@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/melchormendozaramirez" target="_blank">LinkedIn</a></p>
+      <p>🌐 <a href="https://melchormendoza.github.io" target="_blank">melchormendoza.github.io</a></p>
     </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Melchor Mendoza Ramírez</p>
-  </footer>
-
+  </div>
 </body>
 </html>
